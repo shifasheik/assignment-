@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table, List, Grid, Hero Image, Viewport</title>
+<style>
+    /* CSS for demonstration */
+    /* Table with table-layout: fixed */
+    #fixed-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+    #fixed-table th, #fixed-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    /* List with customized list-style-type */
+    #custom-list {
+        list-style-type: square;
+    }
+    /* Grid */
+    #grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .grid-item {
+        background-color: #f0f0f0;
+        padding: 20px;
+        text-align: center;
+    }
+    /* Hero Image */
+    .hero-image {
+        background-image: url('https://assets.monica.im/tools-web/static/imageGeneratorFeatureIntro1-AQU1zYPO.webp');
+        background-size: cover;
+        height: 500px;
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+
+<!-- Table with table-layout: fixed -->
+<h2>Table with table-layout: fixed</h2>
+<table id="fixed-table">
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Lorem ipsum dolor sit amet</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan</td>
+        </tr>
+        <tr>
+            <td>Lorem ipsum dolor sit amet</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- List with customized list-style-type -->
+<h2>List with customized list-style-type</h2>
+<ul id="custom-list">
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+</ul>
+
+<!-- Grid -->
+<h2>Grid</h2>
+<div id="grid-container">
+    <div class="grid-item">Grid Item 1</div>
+    <div class="grid-item">Grid Item 2</div>
+    <div class="grid-item">Grid Item 3</div>
+    <div class="grid-item">Grid Item 4</div>
+    <div class="grid-item">Grid Item 5</div>
+    <div class="grid-item">Grid Item 6</div>
+</div>
+
+<!-- Hero Image -->
+<div class="hero-image"></div>
+
+<!-- Viewport -->
+<script>
+    // Program for viewport, media queries, image, and video
+    // Adjust styles based on viewport size
+    window.addEventListener('resize', function() {
+        if (window.innerWidth <= 768) {
+            document.getElementById('grid-container').style.gridTemplateColumns = 'repeat(2, 1fr)';
+        } else {
+            document.getElementById('grid-container').style.gridTemplateColumns = 'repeat(3, 1fr)';
+        }
+    });
+</script>
+
+</body>
+</html>
